@@ -1,6 +1,6 @@
 import React from "react";
 import MeetupItem from "./MeetupItem";
-import './MeetupsList.css'
+import classes from './MeetupsList.module.css'
 
 const MeetupsList = (props) => {
   return (
@@ -10,8 +10,8 @@ const MeetupsList = (props) => {
           key={meetup.id}
           id={meetup.id}
           image={meetup.image}
-          title={MediaElementAudioSourceNode.title}
-          addres={meetup.addres}
+          title={meetup.title}
+          address={meetup.address}
         />
       ))}
     </ul>

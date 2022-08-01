@@ -1,6 +1,6 @@
 import React from 'react'
 import MainNavigation from './MainNavigation'
-import './Layout.css'
+import classes from './Layout.module.css'
 
 const Layout = (props) => {
   return (

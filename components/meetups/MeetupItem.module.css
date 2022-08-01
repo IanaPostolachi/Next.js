@@ -23,7 +23,12 @@
 .content h3 {
     font-size: 1.25rem;
     color: black;
+
 }
+
+/* .content address{
+    color: black;
+} */
 
 .action {
     padding: 1.5rem;
@@ -33,7 +38,7 @@
 .action button {
     font: inherit;
     cursor: pointer;
-    color: antiquewhite;
+    color: black;
     border: 1x solid #77002e;
     background-color: transparent;
     padding: 0.5rem 1.5rem;

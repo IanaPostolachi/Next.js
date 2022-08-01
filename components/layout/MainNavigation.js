@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import './MainNavigation.css'
+import classes from './MainNavigation.module.css'
 
 const MainNavigation = () => {
   return (
@@ -11,10 +11,10 @@ const MainNavigation = () => {
         <nav>
             <ul>
                 <li>
-                    <Link to='/'>All meetups</Link>
+                    <Link href='/'>All meetups</Link>
                 </li>
                 <li>
-                    <Link to='/new-meetup'>Add new meetup</Link>
+                    <Link href='/new-meetup'>Add new meetup</Link>
                 </li>
             </ul>
         </nav>

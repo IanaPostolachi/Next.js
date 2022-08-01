@@ -1,6 +1,6 @@
-import React from "react";
+import React,{useRef} from "react";
 import Card from "../ui/Card";
-import './NewMeetupForm.css'
+import classes from './NewMeetupForm.module.css'
 
 const NewMeetupForm = (props) => {
   const titleInputRef = useRef();
@@ -28,7 +28,7 @@ const NewMeetupForm = (props) => {
 
   return (
     <Card>
-      <form className={classes.form} onSubmmit={submmitHandler}>
+      <form className={classes.form} onSubmit={submmitHandler}>
         <div className={classes.control}>
           <label htmlFor="title">Meetup title</label>
           <input type="text" required id="title" ref={titleInputRef} />
