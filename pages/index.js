@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import MeetupList from "../components/meetups/MeetupsList";
 
 const dummyData = [
@@ -10,7 +10,7 @@ const dummyData = [
     description: 'this is the first meetup'
   },
   {
-    id: 'm1',
+    id: 'm3',
     title:'New-York',
     address: 'some address',
     image: 'https://img.freepik.com/free-photo/view-manhattan-sunset-new-york-city_268835-463.jpg?w=2000',
@@ -18,17 +18,27 @@ const dummyData = [
   }
 ];
 
-const HomePage = () => {
-  const [loadedMeetups, setLoadedMEetups] = useState([])
-
-  useEffect(() => {
-    //send an http request
-    setLoadedMEetups(dummyData)
-  },[])
-
+const HomePage = (props) => {
   return (
-      <MeetupList meetups={loadedMeetups}/>
+      <MeetupList meetups={props.meetups}/>
   );
 };
+
+export async function getStaticProps() {
+  return {
+    props: {
+      meetups:dummyData
+    },
+    revalidate: 10
+  }
+}
+
+// export async function getServerSideProps(context) {
+//   return{
+//     props: {
+//       meetups: dummyData 
+//     }
+//   }
+// }
 
 export default HomePage;
