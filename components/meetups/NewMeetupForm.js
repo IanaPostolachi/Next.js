@@ -1,6 +1,6 @@
-import React,{useRef} from "react";
+import React, { useRef } from "react";
 import Card from "../ui/Card";
-import classes from './NewMeetupForm.module.css'
+import classes from "./NewMeetupForm.module.css";
 
 const NewMeetupForm = (props) => {
   const titleInputRef = useRef();
@@ -51,7 +51,7 @@ const NewMeetupForm = (props) => {
           ></textarea>
         </div>
         <div className={classes.action}>
-            <button>Add meetup</button>
+          <button>Add meetup</button>
         </div>
       </form>
     </Card>
