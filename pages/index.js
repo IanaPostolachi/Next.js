@@ -12,6 +12,7 @@ const HomePage = (props) => {
         name="description"
         content="This is a place to find places!" />
       </Head>
+      <text>I mean!!!!</text>
       <MeetupList meetups={props.meetups} />
     </>
   );
